@@ -1,0 +1,44 @@
+name: Deploy to github pages (monorepo)
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'beginner/ex_4_github_pages/index.html'   # only run when this changes
+      - '.github/workflows/deploy.yml'            # (optional) run when workflow tweaked
+
+  workflow_dispatch: {}
+
+
+permissions:
+  contents: read
+  page: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Upload JUST the lab folder as the site artifact
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: beginner/ex_4_github_pages
+
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
