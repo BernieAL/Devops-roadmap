@@ -1,0 +1,52 @@
+# --- Terraform working dir
+.terraform/
+.terraform/*
+
+# --- State files (never commit)
+terraform.tfstate
+terraform.tfstate.*
+*.tfstate
+
+# --- Lock file: KEEP THIS COMMITTED (pins provider versions)
+# .terraform.lock.hcl
+
+# --- Crash logs
+crash.log
+crash.*.log
+
+# --- Local variable files (often contain secrets)
+terraform.tfvars
+*.tfvars
+*.tfvars.json
+
+# Allow example/sample vars to be committed
+!terraform.tfvars.example
+!*.example.tfvars
+!*.sample.tfvars
+
+# --- Local-only override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# --- Plan artifacts
+*.tfplan
+*.plan
+
+# --- CLI config (can contain creds)
+.terraformrc
+terraform.rc
+
+# --- Editor/OS noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+.idea/
+.vscode/
+
+# --- Terragrunt (if you use it)
+.terragrunt-cache/
+terragrunt-debug.tfvars.json
