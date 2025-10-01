@@ -1,0 +1,35 @@
+# --- Terraform local dirs/files (DO NOT COMMIT) ---
+**/.terraform/
+terraform.tfstate
+terraform.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+*.plan
+
+# Keep the lockfile (pin provider versions)
+!.terraform.lock.hcl
+
+# --- Local env / secrets ---
+.env
+.env.*
+
+# --- OS/editor noise ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# --- Big binaries/archives ---
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.7z
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
