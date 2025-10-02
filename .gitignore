@@ -33,3 +33,6 @@ Thumbs.db
 *.so
 *.dylib
 *.bin
+
+# Vendored/built docs
+CPGT_SENIOR_ROADMAP/phase_2_terraform/terraform/aws/dist/
