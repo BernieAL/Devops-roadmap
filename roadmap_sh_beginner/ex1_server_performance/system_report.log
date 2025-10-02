@@ -1,0 +1,22 @@
+===== System Report: Wed 17 Sep 2025 12:05:34 PM EDT =====
+CPU Usage: 19.3%
+Memory Usage: 
+Disk Usage: 
+
+Top 5 Processes by CPU:
+    PID COMMAND         %CPU %MEM
+  92729 chrome          12.5  2.7
+   2770 gnome-shell      9.7  4.1
+  90767 code             7.8  3.1
+   6797 chrome           5.1  4.1
+   7021 chrome           5.0  3.9
+
+Top 5 Processes by Memory:
+    PID COMMAND         %MEM
+   2770 gnome-shell      4.1
+   6797 chrome           4.1
+   7021 chrome           3.9
+  90767 code             3.1
+   1056 mysqld           3.0
+===================================
+
